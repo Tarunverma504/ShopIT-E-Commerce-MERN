@@ -21,6 +21,10 @@ exports.processPayment = catchAsyncError(async(req, res, next) => {
 
 //Send stripe api key => /api/v1/stripeapi
 exports.sendStripApi = catchAsyncError(async(req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
     res.status(200).json({
         stripeApiKey: process.env.STRIPE_API_KEY
     })
