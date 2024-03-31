@@ -1,4 +1,4 @@
-# ShopIT E-commerce Project
+<!-- # ShopIT E-commerce Project
 
 > Complete E-commerce site built with Node.js, React, Redux, Express, MongoDB
 
@@ -28,4 +28,4 @@ Run it in the root folder.
 
 ```
 npm run seeder
-```
+``` -->
