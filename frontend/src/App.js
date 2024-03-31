@@ -55,22 +55,22 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState('');
 
   useEffect(() => {
-    //store.dispatch(loadUser())
+    store.dispatch(loadUser())
 
-    // async function getStripApiKey() {
-    //   const Token= localStorage.getItem("Token");
+    async function getStripApiKey() {
+      const Token= localStorage.getItem("Token");
 
-    //     const config = {
-    //         headers: {
-    //             'Content-Type': 'multipart/form-data',
-    //             'authorization':`Bearer ${Token}`
-    //         }
-    //     }
-    //   const { data } = await axios.get(`${process.env.REACT_APP_PORT}/api/v1/stripeapi`,config);
-    //   setStripeApiKey(data.stripeApiKey)
-    // }
+        const config = {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                'authorization':`Bearer ${Token}`
+            }
+        }
+      const { data } = await axios.get(`${process.env.REACT_APP_PORT}/api/v1/stripeapi`,config);
+      setStripeApiKey(data.stripeApiKey)
+    }
 
-    //getStripApiKey();
+    getStripApiKey();
 
   }, [])
 
