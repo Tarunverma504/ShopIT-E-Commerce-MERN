@@ -70,7 +70,7 @@ function App() {
       setStripeApiKey(data.stripeApiKey)
     }
 
-    getStripApiKey();
+    //getStripApiKey();
 
   }, [])
 
