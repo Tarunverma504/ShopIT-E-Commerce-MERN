@@ -55,7 +55,7 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState('');
 
   useEffect(() => {
-    store.dispatch(loadUser())
+    //store.dispatch(loadUser())
 
     // async function getStripApiKey() {
     //   const Token= localStorage.getItem("Token");
