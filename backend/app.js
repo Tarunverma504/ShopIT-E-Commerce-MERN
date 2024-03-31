@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
 const cors = require("cors");
-app.use(cors());
+app.use(cors({origin: '*'}));
 const bodyParser = require('body-parser');
 const cloudinary = require('cloudinary');
 
